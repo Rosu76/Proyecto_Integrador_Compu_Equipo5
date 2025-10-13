@@ -4,7 +4,6 @@ def init_database():
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
     
-    # Create inventario table if it doesn't exist
     c.execute('''
         CREATE TABLE IF NOT EXISTS inventario (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -16,7 +15,6 @@ def init_database():
         )
     ''')
 
-    # Create ventas table if it doesn't exist
     c.execute('''
         CREATE TABLE IF NOT EXISTS ventas (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
