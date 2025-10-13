@@ -25,7 +25,12 @@ class Container(tk.Frame):
         frame.pack(fill="both", expand = True)
         top_level.geometry("1100x650+120+20")
         top_level.resizable(False, False)
-    
+
+        top_level.transient(self.master)
+        top_level.grab_set()
+        top_level.focus_set()
+        top_level.lift()
+
     def ventas(self):
         self.show_frames(Ventas)
 
