@@ -1,2 +1,9 @@
 .vscode/
 __pycache__/
+ .venv/
+ *.pyc
+ database.db
+ *.db-journal
+ .DS_Store
+ .env
+ *.sqlite3
